@@ -1,0 +1,149 @@
+---
+import IconSubscribe from "../assets/icon-subscribe.svg";
+import IconEngage from "../assets/icon-engage.svg";
+import IconCreate from "../assets/icon-create.svg";
+---
+
+<section class="engagementModels">
+    <div class="inner">
+        <h2 class="heading">
+            Expertise when you need it.
+            <span>None of the baggage when you don’t.</span>
+        </h2>
+        <p class="subheading">Three models built for real-world projects.</p>
+        <p>
+            Not every project needs a full consulting engagement, and not every team has the time or
+            headspace to run a migration on their own. Whether you need occasional advice,
+            structured partnership, or full delivery support, we offer flexible ways to work
+            together. Three models. Zero overhead. Built around your needs.
+        </p>
+        <div class="cards">
+            <div class="card">
+                <h3>Subscribe</h3>
+                <IconSubscribe />
+                <p class="subheading">Strategic input, without the full engagement.</p>
+                <p>
+                    A light-touch consulting model designed for teams who need occasional expert
+                    input, not a full consulting project. You get up to two days per month of access
+                    for workshops, feedback, or short strategy bursts. Unused time can roll over for
+                    up to two months.
+                </p>
+                <ul class="details">
+                    <li class="price">£2,000/mo</li>
+                    <li>Up to 2 days per month</li>
+                    <li>Great for teams exploring headless or needing periodic expert support.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Engage</h3>
+                <IconEngage />
+                <p class="subheading">A true partner in strategy and delivery.</p>
+                <p>
+                    We work side-by-side with your team to define the approach, lead key phases of
+                    the migration, and keep things moving. From stakeholder alignment to modelling,
+                    vendor support to delivery oversight, we bring experience, structure, and
+                    momentum to complex work.
+                </p>
+                <ul class="details">
+                    <li class="price">From £16,500/mo (min. 3 months)</li>
+                    <li>Shared leadership and direction</li>
+                    <li>Ideal for large migrations and in-house teams</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Create</h3>
+                <IconCreate />
+                <p class="subheading">Let us lead, and deliver the outcome.</p>
+                <p>
+                    When your team doesn’t have the capacity or expertise to run the migration
+                    yourself, we take the lead. From strategy and modelling to transformation and
+                    handover, we own the process, keep you in the loop, and deliver a headless
+                    solution shaped around your goals.
+                </p>
+                <ul class="details">
+                    <li class="price">From £50,000/project</li>
+                    <li>End-to-end leadership and delivery</li>
+                    <li>Best for smaller teams or time-sensitive projects</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        padding: 4rem 2rem 6rem;
+        background-color: var(--color-black);
+    }
+    .heading {
+        font-size: var(--text-2xl);
+        color: var(--color-white);
+    }
+    .heading span {
+        display: block;
+        color: var(--color-red);
+    }
+    .inner > p {
+        color: var(--color-white);
+    }
+    .inner > p.subheading {
+        font-size: var(--text-xl);
+        color: var(--color-grey-light);
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4rem;
+        margin-top: 4rem;
+    }
+    .card {
+        background-color: var(--color-white);
+        border-radius: 1rem;
+        padding: 1rem 2rem 2rem;
+        transition: all var(--duration-normal) ease-out;
+        transform: none;
+        box-shadow:
+            inset 0 0 0px rgba(255, 255, 255, 0.6),
+            rgba(0, 0, 0, 0.2) 0px 00px 00px -7px;
+    }
+    .card h3 {
+        color: var(--color-red);
+        font-size: var(--text-xl);
+    }
+    .card .subheading {
+        font-size: var(--text-lg);
+    }
+
+    .card svg {
+        display: block;
+        margin: 0 auto 2rem;
+    }
+
+    .card a {
+        text-decoration: none;
+    }
+    .card a::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow:
+            inset 0 -2px 1px rgba(255, 255, 255, 0.8),
+            rgba(0, 0, 0, 0.2) 0px 20px 40px 15px;
+    }
+
+    @media screen and (max-width: 40rem) {
+        .cards {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-auto-flow: column;
+        }
+    }
+</style>

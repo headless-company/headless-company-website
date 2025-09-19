@@ -1,0 +1,84 @@
+<section class="prefooter">
+    <div class="inner">
+        <h2 class="heading">Need help going headless?</h2>
+        <p class="subheading">
+            Whether you’re planning a migration or already deep in one, we’d love to talk.
+        </p>
+        <div class="actions">
+            <a
+                href="https://outlook.office.com/book/Letsstartadiscussion@headless.company/?ismsaljsauthenabled"
+                class="button primary">Let’s talk</a
+            >
+        </div>
+    </div>
+</section>
+
+<style>
+    .prefooter {
+        position: relative;
+        width: 100%;
+        padding: 10em 2em 6em;
+        background: linear-gradient(9deg, #fe2c54, #ff5374, #c6203f, #fe2c54);
+        background-size: 800% 800%;
+        animation: GradientBackground 18s ease infinite;
+        text-align: center;
+    }
+
+    h2 {
+        color: var(--color-white);
+        font-size: var(--text-3xl);
+    }
+
+    p {
+        font-family: var(--font-subheading);
+        font-size: var(--text-xl);
+        color: var(--color-white);
+        max-width: 30rem;
+        line-height: 1.3em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .actions {
+        margin-top: 4rem;
+    }
+
+    .actions > * + * {
+        margin-left: 2rem;
+    }
+
+    @media screen and (max-width: 40rem) {
+        .prefooter {
+            padding: 6rem 2rem 3rem;
+        }
+        h1 {
+            font-size: var(--text-2xl);
+        }
+        p {
+            dont-size: var(--text-lg);
+        }
+        .actions {
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-auto-flow: column;
+            gap: 2rem;
+        }
+        .actions a {
+            text-align: center;
+        }
+    }
+
+    @keyframes GradientBackground {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+</style>

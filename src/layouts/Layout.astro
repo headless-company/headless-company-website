@@ -1,22 +1,121 @@
+---
+import "@fontsource-variable/epilogue";
+import "@fontsource-variable/playfair-display";
+import "@fontsource-variable/mulish";
+
+import TopNav from "../components/TopNav.astro";
+import Footer from "../components/Footer.astro";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Headless CMS Migrations. Done right. – The Headless Company</title>
+    </head>
+    <body>
+        <TopNav />
+        <slot />
+        <Footer />
+    </body>
 </html>
 
+<style is:global>
+    :root {
+        --font-heading: "Epilogue Variable", helvetica, arial, sans-serif;
+        --font-subheading: "Playfair Variable", georgia, "Times New Roman", times, serif;
+        --font-body: "Mulish Variable", helvetica, arial, sans-serif;
+
+        --color-red: #fe2c54;
+        --color-black: #1e1e1e;
+        --color-white: #ffffff;
+        --color-grey: #bcbcbc;
+        --color-grey-light: #ececec;
+
+        --text-base: 1rem;
+        --text-lg: 1.25rem;
+        --text-xl: 1.5rem;
+        --text-2xl: 2rem;
+        --text-3xl: 3rem;
+        --text-4xl: 4rem;
+
+        --duration-xfast: 0.1s;
+        --duration-fast: 0.2s;
+        --duration-normal: 0.3s;
+        --duration-slow: 0.5s;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .inner {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 80rem;
+    }
+
+    .heading {
+        font-family: var(--font-heading);
+        line-height: 1.25em;
+    }
+    .subheading {
+        font-family: var(--font-subheading);
+        font-style: italic;
+        font-weight: 200;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-weight: 800;
+        font-size: var(--text-base);
+        text-decoration: none;
+        letter-spacing: 0.04em;
+        border-radius: 0.5rem;
+        transition: all var(--duration-fast) ease-out;
+    }
+    .button.primary {
+        background-color: var(--color-black);
+        color: var(--color-white);
+    }
+    .button.primary:hover,
+    .button.primary:active {
+        background-color: var(--color-white);
+        color: var(--color-red);
+    }
+
+    .cta {
+        font-weight: 800;
+        font-size: var(--text-base);
+        letter-spacing: 0.04em;
+        text-decoration-color: transparent;
+        text-decoration-thickness: 2px;
+        transition:
+            color var(--duration-fast) ease-out,
+            text-decoration-color var(--duration-fast) var(--duration-xfast) ease-out;
+    }
+    .cta.tertiary {
+        color: var(--color-white);
+    }
+    .cta.tertiary:hover,
+    .cta.tertiary:active {
+        color: var(--color-black);
+        text-decoration-color: var(--color-black);
+    }
+</style>
+
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-family: var(--font-body);
+        line-height: 1.4em;
+        scroll-behaviour: smooth;
+    }
 </style>

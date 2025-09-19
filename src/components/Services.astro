@@ -1,0 +1,126 @@
+---
+import IconPlan from "../assets/icon-plan.svg";
+import IconMigrate from "../assets/icon-migrate.svg";
+import IconEnable from "../assets/icon-enable.svg";
+---
+
+<section class="services">
+    <div class="inner">
+        <h2 class="heading">
+            Clarity from day one.
+            <span>Confidence for the future.</span>
+        </h2>
+        <p class="subheading">
+            We help organisations go headless without the headaches; from early strategy to
+            post-launch enablement.
+        </p>
+        <div class="cards">
+            <div class="card">
+                <h3>Plan</h3>
+                <IconPlan />
+                <p class="subheading">Lay the right foundations.</p>
+                <p>
+                    We help you understand your content, teams, and goals: auditing what you have,
+                    defining what you need, and guiding vendor selection and architecture to set
+                    your project up for success.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Migrate</h3>
+                <IconMigrate />
+                <p class="subheading">Move with structure, not stress.</p>
+                <p>
+                    We lead efforts around modelling, technical implementation, content
+                    transformation and deployment, ensuring your migration is structured, scalable,
+                    and aligned with how your teams actually work.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Enable</h3>
+                <IconEnable />
+                <p class="subheading">Beacuse success is about more than just the launch.</p>
+                <p>
+                    Going live is just the beginning. We help your teams embed good habits, build
+                    confidence, and stay aligned to the strategy, so your headless platform keeps
+                    delivering value long after launch.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        padding: 4rem 2rem 6rem;
+        background-color: var(--color-grey-light);
+    }
+    .heading {
+        font-size: var(--text-2xl);
+    }
+    .heading span {
+        display: block;
+        color: var(--color-red);
+    }
+    p.subheading {
+        font-size: var(--text-xl);
+        max-width: 40rem;
+        line-height: 1.3em;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4rem;
+        margin-top: 4rem;
+    }
+    .card {
+        position: relative;
+        background-color: var(--color-black);
+        color: var(--color-white);
+        border-radius: 1rem;
+        padding: 1rem 2rem 2rem;
+        transition: all var(--duration-normal) ease-out;
+        transform: none;
+        box-shadow:
+            inset 0 0 0px rgba(255, 255, 255, 0.6),
+            rgba(0, 0, 0, 0.2) 0px 00px 00px -7px;
+    }
+    .card h3 {
+        color: var(--color-red);
+        font-size: var(--text-xl);
+    }
+    .card .subheading {
+        font-size: var(--text-lg);
+    }
+    .card svg {
+        display: block;
+        margin: 0 auto 2rem;
+    }
+
+    .card a {
+        text-decoration: none;
+    }
+    .card a::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow:
+            inset 0 -2px 1px rgba(255, 255, 255, 0.8),
+            rgba(0, 0, 0, 0.2) 0px 20px 40px 15px;
+    }
+
+    @media screen and (max-width: 40rem) {
+        .cards {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-auto-flow: column;
+        }
+    }
+</style>

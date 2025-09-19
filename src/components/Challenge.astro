@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+import questionsImage from "../assets/illustration-questions.png";
+---
+
+<section class="challenge" id="challenge">
+    <div class="inner">
+        <div>
+            <h2 class="heading">
+                Going headless means making a lot of choices.
+                <span>We help make sure they’re the right ones.</span>
+            </h2>
+            <p>
+                From content modelling and migration to vendor selection and workflows, we help
+                ensure your headless CMS delivers on its promise, not just technically, but in the
+                way it supports your teams.
+            </p>
+        </div>
+        <Image
+            src={questionsImage}
+            alt="You have questions. We have answers"
+            loading="lazy"
+            decoding="async"
+        />
+    </div>
+</section>
+
+<style>
+    section {
+        padding: 4rem 2rem 5rem;
+    }
+    .inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+    .inner > div {
+        order: 1;
+    }
+    .inner > img {
+        order: 0;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .heading {
+        font-size: var(--text-2xl);
+        max-width: 30rem;
+    }
+    .heading span {
+        display: block;
+        color: var(--color-red);
+    }
+
+    @media screen and (max-width: 40rem) {
+        section .inner {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-auto-flow: column;
+        }
+    }
+</style>

@@ -9,6 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/epilogue": "^5.2.8",
+    "@fontsource-variable/mulish": "^5.2.8",
+    "@fontsource-variable/playfair-display": "^5.2.8",
     "astro": "^5.13.8"
   }
 }

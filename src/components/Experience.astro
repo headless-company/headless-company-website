@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import experienceImage from "../assets/illustration-experience.png";
+---
+
+<section class="experience">
+    <div class="inner">
+        <div>
+            <h2 class="heading">Experience. Built in.</h2>
+            <p class="subheading">
+                Real experience beats more bodies. We bring the people who know what works.
+            </p>
+            <p>
+                When you work with The Headless Company, you’re not getting junior consultants or
+                bloated delivery teams. You’re working directly with experienced specialists who’ve
+                handled complex migrations before; people who know where the pitfalls are, and how
+                to avoid them.
+            </p>
+            <p>
+                We believe in keeping things lean: small, senior teams who move faster, make better
+                decisions, and need less hand-holding. And because we work efficiently, bringing in
+                the right kind of help doesn’t have to cost what you might expect.
+            </p>
+            <p>
+                It’s not just about avoiding mistakes. It’s about making the right calls early,
+                shaping decisions that scale, and helping your team feel confident through the
+                process. That’s what experience really brings to the table: not just smoother
+                delivery, but better long-term outcomes.
+            </p>
+        </div>
+        <Image
+            src={experienceImage}
+            alt="Experience beats headcount."
+            loading="lazy"
+            decoding="async"
+        />
+    </div>
+</section>
+
+<style>
+    section {
+        padding: 4rem 2rem 5rem;
+    }
+    .inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+    .inner > img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .heading {
+        font-size: var(--text-2xl);
+        color: var(--color-red);
+    }
+    .subheading {
+        font-size: var(--text-xl);
+        line-height: 1.3em;
+    }
+
+    @media screen and (max-width: 40rem) {
+        section .inner {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-auto-flow: column;
+        }
+        .inner > img {
+            order: 0;
+        }
+        .inner > div {
+            order: 1;
+        }
+    }
+</style>
