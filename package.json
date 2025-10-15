@@ -13,6 +13,7 @@
     "@fontsource-variable/mulish": "^5.2.8",
     "@fontsource-variable/playfair-display": "^5.2.8",
     "astro": "^5.13.8",
+    "astro-seo": "^0.8.4",
     "astro-webmanifest": "^1.0.0"
   }
 }

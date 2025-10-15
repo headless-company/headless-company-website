@@ -1,4 +1,6 @@
 ---
+import { SEO } from "astro-seo";
+
 import Layout from "../layouts/Layout.astro";
 
 import Hero from "../components/Hero.astro";
@@ -13,6 +15,31 @@ import PreFooter from "../components/PreFooter.astro";
 ---
 
 <Layout>
+    <SEO
+        title="Headless CMS Migrations. Done right. – The Headless Company"
+        description="The Headless Company is a boutique consultancy specialising in headless CMS migrations and transformation services."
+        openGraph={{
+          basic: {
+              title: "Headless CMS Migrations. Done right. – The Headless Company",
+              type: "article",
+              image: "/default-social-image.png",
+          }
+        }}
+        twitter={{
+          creator: "@HeadlessCo"
+        }}
+        extend={{
+          // extending the default link tags
+          link: [{ rel: "icon", href: "/favicon.svg" }],
+          // extending the default meta tags
+          meta: [
+              { name: "twitter:title", content: "Headless CMS Migrations. Done right. – The Headless Company" },
+              { name: "twitter:description", content: "The Headless Company is a boutique consultancy specialising in headless CMS migrations and transformation services." },
+              { name: "twitter:image", content: "/default-social-image.png" },
+
+          ],
+        }}
+    />
     <Hero />
     <Challenge />
     <Services />
