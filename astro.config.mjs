@@ -28,7 +28,11 @@ export default defineConfig({
     theme_color: "#fe2c54",
     background_color: "#fe2c54",
     display: "fullscreen",
-  }), robotsTxt(), sitemap(), partytown()],
+  }), robotsTxt(), sitemap(), partytown({
+    config: {
+      forward: ['dataLayer.push'],
+    },
+  })],
 
   adapter: netlify(),
 });
