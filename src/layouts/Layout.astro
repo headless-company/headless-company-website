@@ -11,14 +11,18 @@ import Footer from "../components/Footer.astro";
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <title>Headless CMS Migrations. Done right. – The Headless Company</title>
+
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>Headless CMS Migrations. Done right. – The Headless Company</title>
+
         <meta name="description" content="The Headless Company is a boutique consultancy specialising in headless CMS migrations and transformation services." />
+        <!-- Google tag (gtag.js) -->
+        <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-2HTRYYCYFF"></script>
         <link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous" />
     </head>
     <body>
@@ -26,8 +30,6 @@ import Footer from "../components/Footer.astro";
         <slot />
         <Footer />
 
-        <!-- Google tag (gtag.js) -->
-        <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-2HTRYYCYFF"></script>
         <script is:inline>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
