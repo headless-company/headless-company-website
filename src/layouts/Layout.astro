@@ -28,6 +28,18 @@ import Footer from "../components/Footer.astro";
     </body>
 </html>
 
+
+<!-- Google tag (gtag.js) -->
+<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-2HTRYYCYFF"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2HTRYYCYFF');
+</script>
+
+
 <style is:global>
     :root {
         --font-heading: "Epilogue Variable", helvetica, arial, sans-serif;
