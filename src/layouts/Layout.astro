@@ -30,12 +30,20 @@ import Footer from "../components/Footer.astro";
         <slot />
         <Footer />
 
-        <script is:inline>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-2HTRYYCYFF');
+        <script
+          type='text/partytown'
+          data-ga-measurement-id="G-2HTRYYCYFF"
+          id='ga-init'
+        >
+          const measurementId = document
+            .getElementById('ga-init')
+            .getAttribute('data-ga-measurement-id')
+          window.dataLayer = window.dataLayer || []
+          function gtag() {
+            dataLayer.push(arguments) // eslint-disable-line
+          }
+          gtag('js', new Date())
+          gtag('config', measurementId)
         </script>
     </body>
 </html>
