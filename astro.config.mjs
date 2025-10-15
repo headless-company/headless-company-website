@@ -4,6 +4,8 @@ import webmanifest from "astro-webmanifest";
 import robotsTxt from "astro-robots-txt";
 import sitemap from "astro-sitemap";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [webmanifest({
@@ -24,4 +26,6 @@ export default defineConfig({
     background_color: "#fe2c54",
     display: "fullscreen",
   }), robotsTxt(), sitemap()],
+
+  adapter: netlify(),
 });
